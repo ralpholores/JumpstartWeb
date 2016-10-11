@@ -1,0 +1,27 @@
+body {
+	background-color: #ebeef2;
+}
+.navbar-default{
+  	background-color: #fff;
+	box-shadow: 2px 2px 5px rgba(0,0,0,0.075);
+}
+.panel-banner{
+	background: url(../img/bg-1.jpg) no-repeat center center;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.page-header h1 small,
+.page-header h2 small,
+.page-header h3 small,
+.page-header h4 small {
+	color: #95a5a6;
+}
+.panel-banner h1,
+.panel-banner h2,
+.panel-banner h3,
+.panel-banner h4 {
+	color: #fff;
+	font-weight: 200;
+}

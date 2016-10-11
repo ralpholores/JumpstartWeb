@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>Approved Projects</title>
+
+	   <!-- Link Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    
+     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="../JumpstartWEBfinal/css/table.css" />
+
+<style>
+body {
+    font-family: "Lato", sans-serif;
+    transition: background-color .5s;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="PendingProjects.html">Pending Projects</a>
+  <a href="ApprovedProjects.html">Approved Projects</a>
+  <a href="RegisteredInvestors.html">Registered Investors</a>
+  
+</div>
+
+
+  <div id="main">
+      <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  		<div class="mainDiv" align="left">
+      <div id="loading">Loading</div>
+      <div id="mainContent" class="hidden">
+        <h1>Approved Projects</h1>
+        <table>
+          <thead>
+            <tr>
+              <td>SME</td>
+              <td>Email</td>
+              <td>Actions</td>
+            </tr>
+          </thead>
+          <tbody id="table_body">
+
+          		<tbody id="sud"></tbody> 
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- end of main -->
+
+
+<script>
+
+
+		//initialize firebase
+		var config = {
+        apiKey: "AIzaSyA_n29APXCRX63dO-tPtQxSBm0kBjALzmU",
+        authDomain: "jumpstart-db0c6.firebaseapp.com",
+        databaseURL: "https://jumpstart-db0c6.firebaseio.com",
+        storageBucket: "jumpstart-db0c6.appspot.com",
+        messagingSenderId: "192149858763"
+    };
+    firebase.initializeApp(config);
+
+
+</script>                                                           
+
+<script src="js/approvedprojects.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+
+<script>
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+    document.getElementById("main").style.marginLeft= "0";
+    document.body.style.backgroundColor = "white";
+}
+</script>
+
+</body>
+</html>
