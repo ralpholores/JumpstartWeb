@@ -18,7 +18,7 @@ rootRef.on("child_added" , snap =>{
 	$("#loading").hide();
 	$("#mainContent").removeClass("hidden");
     $("#table_body").append("<tr><td>" + companyname + "<br><br>" + "Project:&nbsp" + projectName + "<br>"+ "Category:&nbsp" +  projectCategory + "<br>"+ 
-    	"Slogan:&nbsp" + slogan+ "<br>"+ "Needed Funds:&nbsp" + neededF +"<br>"+ "Recieved Funds:&nbsp "+ recievedF +"</td><td>" + email +   "</td><td><button>Remove</button></td></tr>");
+    	"Slogan:&nbsp" + slogan+ "<br>"+ "Needed Funds:&nbsp" + neededF +"<br>"+ "Recieved Funds:&nbsp "+ recievedF +"</td><td>" + email +   "</td><td><button>Enable</button></td><td><button>Disable</button></td></tr>");
 
 
 });
